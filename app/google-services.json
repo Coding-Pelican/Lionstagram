@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "818603360558",
+    "project_id": "lionstagram-test",
+    "storage_bucket": "lionstagram-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818603360558:android:5badc5694dd6f7e1a07abf",
+        "android_client_info": {
+          "package_name": "com.gyeongtae.lionstagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818603360558-94u24v3m7k9h5ap6fbr4bbcujh4n7j13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8PgCsGn_NBc8FZ6-5krZ82IqxLSMbUDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818603360558-94u24v3m7k9h5ap6fbr4bbcujh4n7j13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
