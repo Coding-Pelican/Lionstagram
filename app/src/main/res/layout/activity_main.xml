@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:id="@+id/title_toolbar"
+        android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
         android:layout_height="35dp">
 
@@ -23,10 +23,10 @@
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     <LinearLayout
-        android:id="@+id/toolbar_division"
+        android:id="@+id/main_toolbar_division"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/title_toolbar"
+        android:layout_below="@+id/main_toolbar"
         android:background="@color/colorDivision"
         android:orientation="horizontal"></LinearLayout>
 

@@ -1,16 +1,20 @@
 package com.gyeongtae.lionstagram
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.gyeongtae.lionstagram.databinding.ActivityLoginBinding
 import com.gyeongtae.lionstagram.databinding.ActivityMainBinding
-import com.gyeongtae.lionstagram.navigation.AlarmFragment
-import com.gyeongtae.lionstagram.navigation.DetailViewFragment
-import com.gyeongtae.lionstagram.navigation.GridFragment
-import com.gyeongtae.lionstagram.navigation.UserFragment
+import com.gyeongtae.lionstagram.navigation.*
+import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var activityMainBinding: ActivityMainBinding
@@ -21,6 +25,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(activityMainBinding.root)
 
         activityMainBinding.bottomNavigation.setOnNavigationItemSelectedListener(this)
+
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+            1
+        )
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -38,6 +48,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 return true
             }
             R.id.action_add_photo -> {
+                if (ContextCompat.checkSelfPermission(
+                        this,
+                        android.Manifest.permission.READ_EXTERNAL_STORAGE
+                    ) == PackageManager.PERMISSION_GRANTED
+                ) {
+                    startActivity(Intent(this, AddPhotoActivity::class.java))
+                }
                 return true
             }
             R.id.action_favorite_alarm -> {
