@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/nav_division"
-        android:layout_below="@+id/toolbar_division"></FrameLayout>
+        android:layout_below="@+id/main_toolbar_division"></FrameLayout>
 
     <LinearLayout
         android:id="@+id/nav_division"

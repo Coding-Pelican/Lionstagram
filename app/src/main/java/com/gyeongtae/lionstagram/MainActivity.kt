@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
             1
         )
+
+        //Set default screen
+        activityMainBinding.bottomNavigation.selectedItemId = R.id.action_home
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
